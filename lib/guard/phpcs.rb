@@ -4,7 +4,7 @@ require 'guard/guard'
 module Guard
 	class PHPCS < Guard
 
-  		VERSION = '0.0.1'
+  		VERSION = '0.0.2'
 
   		DEFAULT_OPTIONS = {
 			:standard => 'Zend',
@@ -17,7 +17,7 @@ module Guard
 	      super(watchers, @options)
 	    end
 
-	    def run_on_change(paths)
+	    def run_on_changes(paths)
 			paths.each do |path|
 				results = `phpcs --report=full --tab-width=#{@options[:tabs]} --standard=#{@options[:standard]} #{path}`
 				if $?.to_i > 0 then
