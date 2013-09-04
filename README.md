@@ -22,7 +22,7 @@ And then add a basic setup to your Guardfile:
 
 * `:executable   # default => "phpcs"`
 
-Specify alternative path to the jshint command.
+Specify alternative path to the phpcs command.
 
 * `:standard   # default => "Zend"`
 
