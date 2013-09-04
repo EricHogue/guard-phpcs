@@ -4,10 +4,11 @@ require 'guard/guard'
 module Guard
 	class PHPCS < Guard
 
-  		VERSION = '0.0.4'
+  		VERSION = '0.0.5'
 
   		DEFAULT_OPTIONS = {
 			:standard => 'Zend',
+			:executable => 'phpcs',
 	    }
 
 	    def initialize(watchers = [], options = {})
@@ -19,7 +20,7 @@ module Guard
 
 	    def run_on_changes(paths)
 			paths.each do |path|
-				results = `phpcs --report=full#{@tabs}--standard=#{@options[:standard]} #{path}`
+				results = `#{@options[:executable]} --report=full#{@tabs}--standard=#{@options[:standard]} #{path}`
 				if $?.to_i > 0 then
 					::Guard::Notifier.notify(results.gsub(/^-+\n/, '').gsub(/^FILE:.*\n/, '').gsub(/^Time:.*\n/, ''), :title => 'PHP Codesniffer', :image => :failed)
 					puts results

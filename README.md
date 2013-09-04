@@ -20,6 +20,10 @@ And then add a basic setup to your Guardfile:
 
 ## Options
 
+* `:executable   # default => "phpcs"`
+
+Specify alternative path to the jshint command.
+
 * `:standard   # default => "Zend"`
 
 The name or path of the coding standard to use.
