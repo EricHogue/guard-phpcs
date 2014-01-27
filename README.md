@@ -1,3 +1,5 @@
+## This project is no longer maintained by me since I'm not using Guard in my projects anymore. Feel free to contact me if you wan't to be a new maintainer.
+
 # Guard::PHPCS
 
 This guard will run [PHP Code Sniffer](http://pear.php.net/package/PHP_CodeSniffer) for you automatically when files are modified.
