@@ -18,7 +18,7 @@ module Guard
 	      super(watchers, @options)
 	    end
 
-	    def run_on_changes(paths)
+	    def run_on_modifications(paths)
 			paths.each do |path|
 				results = `#{@options[:executable]} --report=full#{@tabs}--standard=#{@options[:standard]} #{path}`
 				if $?.to_i > 0 then
