@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Guard::PHPCS::VERSION
   s.authors     = ["Patrik Henningsson"]
   s.email       = ["patrik.henningsson@gmail.com"]
-  s.homepage    = "http://github.com/pahen/guard-phpcs"
+  s.homepage    = "http://github.com/EricHogue/guard-phpcs"
   s.summary     = "Guard gem for running PHPCS"
   s.description = "Guard::PHPCS automatically runs PHP Code Sniffer when watched files are modified."
 
