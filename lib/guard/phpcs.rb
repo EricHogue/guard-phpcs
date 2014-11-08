@@ -2,7 +2,7 @@ require 'guard'
 require 'guard/guard'
 
 module Guard
-	class PHPCS < Guard::Plugin
+	class PHPCS < ::Guard::Plugin
 
   		VERSION = '0.0.6'
 
