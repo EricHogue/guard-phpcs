@@ -1,10 +1,9 @@
 require 'guard'
-require 'guard/guard'
 
 module Guard
 	class PHPCS < ::Guard::Plugin
 
-  		VERSION = '0.0.6'
+  		VERSION = '0.0.7'
 
   		DEFAULT_OPTIONS = {
 			:standard => 'Zend',
