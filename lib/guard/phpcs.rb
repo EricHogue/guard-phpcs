@@ -2,7 +2,7 @@ require 'guard'
 require 'guard/guard'
 
 module Guard
-	class PHPCS < Guard
+	class PHPCS < ::Guard::Plugin
 
   		VERSION = '0.0.6'
 
@@ -11,11 +11,11 @@ module Guard
 			:executable => 'phpcs',
 	    }
 
-	    def initialize(watchers = [], options = {})
+	    def initialize(options = {})
 	      defaults = DEFAULT_OPTIONS.clone
 	      @options = defaults.merge(options)
         @tabs = @options[:tabs]? " --tab-width=#{@options[:tabs]} " : ' '
-	      super(watchers, @options)
+	      super(@options)
 	    end
 
 	    def run_on_modifications(paths)
